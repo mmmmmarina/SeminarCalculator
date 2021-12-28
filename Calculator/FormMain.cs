@@ -17,14 +17,10 @@ namespace Calculator
             InitializeComponent();
         }
 
-        private void entry_TextChanged(object sender, EventArgs e)
+        private void FormMain_Load(object sender, EventArgs e)
         {
-            var enteredValue = entry.Text;
-        }
-
-        private void calculate_Click(object sender, EventArgs e)
-        {
-            result.Text = entry.Text;
+            tableLayoutPaneMain.Width = this.Width;
+            tableLayoutPaneMain.Height = this.Height;
         }
         
     }
