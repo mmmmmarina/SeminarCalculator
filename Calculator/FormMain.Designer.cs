@@ -30,16 +30,16 @@ namespace Calculator
         private void InitializeComponent()
         {
             this.tableLayoutPanelNumbers = new System.Windows.Forms.TableLayoutPanel();
+            this.button_3 = new System.Windows.Forms.Button();
+            this.button_2 = new System.Windows.Forms.Button();
+            this.button_1 = new System.Windows.Forms.Button();
+            this.button_6 = new System.Windows.Forms.Button();
+            this.button_5 = new System.Windows.Forms.Button();
+            this.button_4 = new System.Windows.Forms.Button();
+            this.button_9 = new System.Windows.Forms.Button();
+            this.button_8 = new System.Windows.Forms.Button();
             this.button_0 = new System.Windows.Forms.Button();
             this.button_7 = new System.Windows.Forms.Button();
-            this.button_8 = new System.Windows.Forms.Button();
-            this.button_9 = new System.Windows.Forms.Button();
-            this.button_4 = new System.Windows.Forms.Button();
-            this.button_5 = new System.Windows.Forms.Button();
-            this.button_6 = new System.Windows.Forms.Button();
-            this.button_1 = new System.Windows.Forms.Button();
-            this.button_2 = new System.Windows.Forms.Button();
-            this.button_3 = new System.Windows.Forms.Button();
             this.tableLayoutPanelMain = new System.Windows.Forms.TableLayoutPanel();
             this.textBoxDisplay = new System.Windows.Forms.TextBox();
             this.buttonCalculate = new System.Windows.Forms.Button();
@@ -78,6 +78,126 @@ namespace Calculator
             this.tableLayoutPanelNumbers.Size = new System.Drawing.Size(412, 136);
             this.tableLayoutPanelNumbers.TabIndex = 0;
             // 
+            // button_3
+            // 
+            this.button_3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button_3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_3.Location = new System.Drawing.Point(277, 71);
+            this.button_3.Name = "button_3";
+            this.button_3.Size = new System.Drawing.Size(132, 28);
+            this.button_3.TabIndex = 9;
+            this.button_3.Text = "3";
+            this.button_3.UseVisualStyleBackColor = true;
+            // 
+            // button_2
+            // 
+            this.button_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button_2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_2.Location = new System.Drawing.Point(140, 71);
+            this.button_2.Name = "button_2";
+            this.button_2.Size = new System.Drawing.Size(131, 28);
+            this.button_2.TabIndex = 8;
+            this.button_2.Text = "2";
+            this.button_2.UseVisualStyleBackColor = true;
+            // 
+            // button_1
+            // 
+            this.button_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button_1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_1.Location = new System.Drawing.Point(3, 71);
+            this.button_1.Name = "button_1";
+            this.button_1.Size = new System.Drawing.Size(131, 28);
+            this.button_1.TabIndex = 7;
+            this.button_1.Text = "1";
+            this.button_1.UseVisualStyleBackColor = true;
+            // 
+            // button_6
+            // 
+            this.button_6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button_6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_6.Location = new System.Drawing.Point(277, 37);
+            this.button_6.Name = "button_6";
+            this.button_6.Size = new System.Drawing.Size(132, 28);
+            this.button_6.TabIndex = 6;
+            this.button_6.Text = "6";
+            this.button_6.UseVisualStyleBackColor = true;
+            // 
+            // button_5
+            // 
+            this.button_5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button_5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_5.Location = new System.Drawing.Point(140, 37);
+            this.button_5.Name = "button_5";
+            this.button_5.Size = new System.Drawing.Size(131, 28);
+            this.button_5.TabIndex = 5;
+            this.button_5.Text = "5";
+            this.button_5.UseVisualStyleBackColor = true;
+            // 
+            // button_4
+            // 
+            this.button_4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button_4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_4.Location = new System.Drawing.Point(3, 37);
+            this.button_4.Name = "button_4";
+            this.button_4.Size = new System.Drawing.Size(131, 28);
+            this.button_4.TabIndex = 4;
+            this.button_4.Text = "4";
+            this.button_4.UseVisualStyleBackColor = true;
+            // 
+            // button_9
+            // 
+            this.button_9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button_9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_9.Location = new System.Drawing.Point(277, 3);
+            this.button_9.Name = "button_9";
+            this.button_9.Size = new System.Drawing.Size(132, 28);
+            this.button_9.TabIndex = 3;
+            this.button_9.Text = "9";
+            this.button_9.UseVisualStyleBackColor = true;
+            // 
+            // button_8
+            // 
+            this.button_8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button_8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_8.Location = new System.Drawing.Point(140, 3);
+            this.button_8.Name = "button_8";
+            this.button_8.Size = new System.Drawing.Size(131, 28);
+            this.button_8.TabIndex = 2;
+            this.button_8.Text = "8";
+            this.button_8.UseVisualStyleBackColor = true;
+            // 
             // button_0
             // 
             this.button_0.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -108,126 +228,6 @@ namespace Calculator
             this.button_7.TabIndex = 1;
             this.button_7.Text = "7";
             this.button_7.UseVisualStyleBackColor = true;
-            // 
-            // button_8
-            // 
-            this.button_8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button_8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_8.Location = new System.Drawing.Point(140, 3);
-            this.button_8.Name = "button_8";
-            this.button_8.Size = new System.Drawing.Size(131, 28);
-            this.button_8.TabIndex = 2;
-            this.button_8.Text = "8";
-            this.button_8.UseVisualStyleBackColor = true;
-            // 
-            // button_9
-            // 
-            this.button_9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button_9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_9.Location = new System.Drawing.Point(277, 3);
-            this.button_9.Name = "button_9";
-            this.button_9.Size = new System.Drawing.Size(132, 28);
-            this.button_9.TabIndex = 3;
-            this.button_9.Text = "9";
-            this.button_9.UseVisualStyleBackColor = true;
-            // 
-            // button_4
-            // 
-            this.button_4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button_4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_4.Location = new System.Drawing.Point(3, 37);
-            this.button_4.Name = "button_4";
-            this.button_4.Size = new System.Drawing.Size(131, 28);
-            this.button_4.TabIndex = 4;
-            this.button_4.Text = "4";
-            this.button_4.UseVisualStyleBackColor = true;
-            // 
-            // button_5
-            // 
-            this.button_5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button_5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_5.Location = new System.Drawing.Point(140, 37);
-            this.button_5.Name = "button_5";
-            this.button_5.Size = new System.Drawing.Size(131, 28);
-            this.button_5.TabIndex = 5;
-            this.button_5.Text = "5";
-            this.button_5.UseVisualStyleBackColor = true;
-            // 
-            // button_6
-            // 
-            this.button_6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button_6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_6.Location = new System.Drawing.Point(277, 37);
-            this.button_6.Name = "button_6";
-            this.button_6.Size = new System.Drawing.Size(132, 28);
-            this.button_6.TabIndex = 6;
-            this.button_6.Text = "6";
-            this.button_6.UseVisualStyleBackColor = true;
-            // 
-            // button_1
-            // 
-            this.button_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button_1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_1.Location = new System.Drawing.Point(3, 71);
-            this.button_1.Name = "button_1";
-            this.button_1.Size = new System.Drawing.Size(131, 28);
-            this.button_1.TabIndex = 7;
-            this.button_1.Text = "1";
-            this.button_1.UseVisualStyleBackColor = true;
-            // 
-            // button_2
-            // 
-            this.button_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button_2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_2.Location = new System.Drawing.Point(140, 71);
-            this.button_2.Name = "button_2";
-            this.button_2.Size = new System.Drawing.Size(131, 28);
-            this.button_2.TabIndex = 8;
-            this.button_2.Text = "2";
-            this.button_2.UseVisualStyleBackColor = true;
-            // 
-            // button_3
-            // 
-            this.button_3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button_3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_3.Location = new System.Drawing.Point(277, 71);
-            this.button_3.Name = "button_3";
-            this.button_3.Size = new System.Drawing.Size(132, 28);
-            this.button_3.TabIndex = 9;
-            this.button_3.Text = "3";
-            this.button_3.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanelMain
             // 

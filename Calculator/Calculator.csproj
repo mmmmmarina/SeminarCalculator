@@ -53,6 +53,7 @@
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Numbers.cs" />
+    <Compile Include="ProcessInput.cs" />
     <Compile Include="ProcessText.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
