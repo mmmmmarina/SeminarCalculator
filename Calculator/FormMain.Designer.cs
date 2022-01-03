@@ -68,14 +68,15 @@ namespace Calculator
             this.tableLayoutPanelNumbers.Controls.Add(this.button_8, 1, 0);
             this.tableLayoutPanelNumbers.Controls.Add(this.button_0, 1, 3);
             this.tableLayoutPanelNumbers.Controls.Add(this.button_7, 0, 0);
-            this.tableLayoutPanelNumbers.Location = new System.Drawing.Point(3, 127);
+            this.tableLayoutPanelNumbers.Location = new System.Drawing.Point(2, 103);
+            this.tableLayoutPanelNumbers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanelNumbers.Name = "tableLayoutPanelNumbers";
             this.tableLayoutPanelNumbers.RowCount = 4;
             this.tableLayoutPanelNumbers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelNumbers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelNumbers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelNumbers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanelNumbers.Size = new System.Drawing.Size(412, 136);
+            this.tableLayoutPanelNumbers.Size = new System.Drawing.Size(309, 112);
             this.tableLayoutPanelNumbers.TabIndex = 0;
             // 
             // button_3
@@ -86,9 +87,10 @@ namespace Calculator
             this.button_3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button_3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_3.Location = new System.Drawing.Point(277, 71);
+            this.button_3.Location = new System.Drawing.Point(208, 58);
+            this.button_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_3.Name = "button_3";
-            this.button_3.Size = new System.Drawing.Size(132, 28);
+            this.button_3.Size = new System.Drawing.Size(99, 24);
             this.button_3.TabIndex = 9;
             this.button_3.Text = "3";
             this.button_3.UseVisualStyleBackColor = true;
@@ -101,9 +103,10 @@ namespace Calculator
             this.button_2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button_2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_2.Location = new System.Drawing.Point(140, 71);
+            this.button_2.Location = new System.Drawing.Point(105, 58);
+            this.button_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_2.Name = "button_2";
-            this.button_2.Size = new System.Drawing.Size(131, 28);
+            this.button_2.Size = new System.Drawing.Size(99, 24);
             this.button_2.TabIndex = 8;
             this.button_2.Text = "2";
             this.button_2.UseVisualStyleBackColor = true;
@@ -116,9 +119,10 @@ namespace Calculator
             this.button_1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button_1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_1.Location = new System.Drawing.Point(3, 71);
+            this.button_1.Location = new System.Drawing.Point(2, 58);
+            this.button_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_1.Name = "button_1";
-            this.button_1.Size = new System.Drawing.Size(131, 28);
+            this.button_1.Size = new System.Drawing.Size(99, 24);
             this.button_1.TabIndex = 7;
             this.button_1.Text = "1";
             this.button_1.UseVisualStyleBackColor = true;
@@ -131,9 +135,10 @@ namespace Calculator
             this.button_6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button_6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_6.Location = new System.Drawing.Point(277, 37);
+            this.button_6.Location = new System.Drawing.Point(208, 30);
+            this.button_6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_6.Name = "button_6";
-            this.button_6.Size = new System.Drawing.Size(132, 28);
+            this.button_6.Size = new System.Drawing.Size(99, 24);
             this.button_6.TabIndex = 6;
             this.button_6.Text = "6";
             this.button_6.UseVisualStyleBackColor = true;
@@ -146,9 +151,10 @@ namespace Calculator
             this.button_5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button_5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_5.Location = new System.Drawing.Point(140, 37);
+            this.button_5.Location = new System.Drawing.Point(105, 30);
+            this.button_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_5.Name = "button_5";
-            this.button_5.Size = new System.Drawing.Size(131, 28);
+            this.button_5.Size = new System.Drawing.Size(99, 24);
             this.button_5.TabIndex = 5;
             this.button_5.Text = "5";
             this.button_5.UseVisualStyleBackColor = true;
@@ -161,9 +167,10 @@ namespace Calculator
             this.button_4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button_4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_4.Location = new System.Drawing.Point(3, 37);
+            this.button_4.Location = new System.Drawing.Point(2, 30);
+            this.button_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_4.Name = "button_4";
-            this.button_4.Size = new System.Drawing.Size(131, 28);
+            this.button_4.Size = new System.Drawing.Size(99, 24);
             this.button_4.TabIndex = 4;
             this.button_4.Text = "4";
             this.button_4.UseVisualStyleBackColor = true;
@@ -176,9 +183,10 @@ namespace Calculator
             this.button_9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button_9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_9.Location = new System.Drawing.Point(277, 3);
+            this.button_9.Location = new System.Drawing.Point(208, 2);
+            this.button_9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_9.Name = "button_9";
-            this.button_9.Size = new System.Drawing.Size(132, 28);
+            this.button_9.Size = new System.Drawing.Size(99, 24);
             this.button_9.TabIndex = 3;
             this.button_9.Text = "9";
             this.button_9.UseVisualStyleBackColor = true;
@@ -191,9 +199,10 @@ namespace Calculator
             this.button_8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button_8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_8.Location = new System.Drawing.Point(140, 3);
+            this.button_8.Location = new System.Drawing.Point(105, 2);
+            this.button_8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_8.Name = "button_8";
-            this.button_8.Size = new System.Drawing.Size(131, 28);
+            this.button_8.Size = new System.Drawing.Size(99, 24);
             this.button_8.TabIndex = 2;
             this.button_8.Text = "8";
             this.button_8.UseVisualStyleBackColor = true;
@@ -206,9 +215,10 @@ namespace Calculator
             this.button_0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button_0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_0.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_0.Location = new System.Drawing.Point(140, 105);
+            this.button_0.Location = new System.Drawing.Point(105, 86);
+            this.button_0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_0.Name = "button_0";
-            this.button_0.Size = new System.Drawing.Size(131, 28);
+            this.button_0.Size = new System.Drawing.Size(99, 24);
             this.button_0.TabIndex = 0;
             this.button_0.Text = "0";
             this.button_0.UseVisualStyleBackColor = true;
@@ -222,9 +232,10 @@ namespace Calculator
             this.button_7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button_7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_7.Location = new System.Drawing.Point(3, 3);
+            this.button_7.Location = new System.Drawing.Point(2, 2);
+            this.button_7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_7.Name = "button_7";
-            this.button_7.Size = new System.Drawing.Size(131, 28);
+            this.button_7.Size = new System.Drawing.Size(99, 24);
             this.button_7.TabIndex = 1;
             this.button_7.Text = "7";
             this.button_7.UseVisualStyleBackColor = true;
@@ -242,14 +253,15 @@ namespace Calculator
             this.tableLayoutPanelMain.Controls.Add(this.textBoxDisplay, 0, 0);
             this.tableLayoutPanelMain.Controls.Add(this.buttonCalculate, 0, 3);
             this.tableLayoutPanelMain.Controls.Add(this.textBoxResult, 1, 3);
-            this.tableLayoutPanelMain.Location = new System.Drawing.Point(4, 5);
+            this.tableLayoutPanelMain.Location = new System.Drawing.Point(3, 4);
+            this.tableLayoutPanelMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanelMain.Name = "tableLayoutPanelMain";
             this.tableLayoutPanelMain.RowCount = 4;
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanelMain.Size = new System.Drawing.Size(836, 357);
+            this.tableLayoutPanelMain.Size = new System.Drawing.Size(627, 290);
             this.tableLayoutPanelMain.TabIndex = 1;
             // 
             // textBoxDisplay
@@ -258,18 +270,20 @@ namespace Calculator
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanelMain.SetColumnSpan(this.textBoxDisplay, 2);
-            this.textBoxDisplay.Location = new System.Drawing.Point(3, 3);
+            this.textBoxDisplay.Location = new System.Drawing.Point(2, 2);
+            this.textBoxDisplay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDisplay.Name = "textBoxDisplay";
             this.textBoxDisplay.ReadOnly = true;
-            this.textBoxDisplay.Size = new System.Drawing.Size(830, 22);
+            this.textBoxDisplay.Size = new System.Drawing.Size(623, 20);
             this.textBoxDisplay.TabIndex = 1;
             // 
             // buttonCalculate
             // 
             this.buttonCalculate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCalculate.Location = new System.Drawing.Point(295, 269);
+            this.buttonCalculate.Location = new System.Drawing.Point(221, 219);
+            this.buttonCalculate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCalculate.Name = "buttonCalculate";
-            this.buttonCalculate.Size = new System.Drawing.Size(120, 35);
+            this.buttonCalculate.Size = new System.Drawing.Size(90, 28);
             this.buttonCalculate.TabIndex = 2;
             this.buttonCalculate.Text = "&Izračunaj";
             this.buttonCalculate.UseVisualStyleBackColor = true;
@@ -278,20 +292,22 @@ namespace Calculator
             // textBoxResult
             // 
             this.textBoxResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxResult.Location = new System.Drawing.Point(421, 269);
+            this.textBoxResult.Location = new System.Drawing.Point(315, 219);
+            this.textBoxResult.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxResult.Name = "textBoxResult";
             this.textBoxResult.ReadOnly = true;
-            this.textBoxResult.Size = new System.Drawing.Size(100, 30);
+            this.textBoxResult.Size = new System.Drawing.Size(76, 26);
             this.textBoxResult.TabIndex = 3;
             this.textBoxResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 364);
+            this.ClientSize = new System.Drawing.Size(634, 296);
             this.Controls.Add(this.tableLayoutPanelMain);
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormMain";
             this.Text = "FormMain";
             this.Load += new System.EventHandler(this.FormMain_Load);

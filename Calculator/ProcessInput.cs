@@ -1,20 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms.VisualStyles;
 
 namespace Calculator
 {
     class Calculation
     {
         private double _primaryOperations;
+        private bool _primaryOperationsFlag;
         private List<double> _nonPrimaryOperations;
         private char _operand;
 
         public Calculation()
         {
             _primaryOperations = 0;
+            _primaryOperationsFlag = false;
             _nonPrimaryOperations = new List<double>();
             _operand = '\0';
         }
@@ -25,11 +29,22 @@ namespace Calculator
             set => _nonPrimaryOperations.Add(value);
         }
 
+        public bool PrimaryOperationsFlag
+        {
+            get => _primaryOperationsFlag;
+            set => _primaryOperationsFlag = value;
+        }
+
         public double PrimaryOperations
         {
-            get => _primaryOperations;
+            get
+            {
+                PrimaryOperationsFlag = false; 
+                return _primaryOperations;
+            }
             set
             {
+                PrimaryOperationsFlag = true;
                 if (_operand == '*')
                     _primaryOperations *= value;
                 else if (_operand == '/')
@@ -47,102 +62,135 @@ namespace Calculator
     }
     class ProcessInput
     {
-        public static int position = 0;
-        public static double Calculate(string textInput)
+        public static int Position = 0;
+
+        private static string EmptyPrimaryOperations(Calculation tempCalculation)
         {
-            string number = "";
-            Calculation tempCalculation = new Calculation();
-
-            //keepTrack.Push(tempCalculation);
-            //for (int i=start_position; i<textInput.Length; i++)
-            while (position < textInput.Length)
+            if (tempCalculation.PrimaryOperationsFlag)
             {
-                char letter = textInput[position];
-                if (letter == '+')
-                {
-                    if (tempCalculation.PrimaryOperations != 0)
-                    {
-                        tempCalculation.NonPrimaryOperations = tempCalculation.PrimaryOperations;
-                        tempCalculation.PrimaryOperations = 0;
-                    }
-                    string sign = tempCalculation.Operand == '-' ? "-" : "";
-                    tempCalculation.NonPrimaryOperations = Double.Parse($"{sign}{number}");
-                    tempCalculation.Operand = '+';
-                    number = "";
-                }
-
-                else if (letter == '-')
-                {
-                    if (tempCalculation.PrimaryOperations != 0 &&
-                        (tempCalculation.Operand == '*' || tempCalculation.Operand == '/'))
-                    {
-                        tempCalculation.NonPrimaryOperations = tempCalculation.PrimaryOperations;
-                        tempCalculation.PrimaryOperations = 0;
-                    }
-                    string sign = tempCalculation.Operand == '-' ? "-" : "";
-                    if (number == "")
-                        number = "0";
-                    tempCalculation.NonPrimaryOperations = Double.Parse($"{sign}{number}");
-                    tempCalculation.Operand = '-';
-                    number = "";
-                }
-                else if (letter == '*' || letter == '/')
-                {
-                    string sign = tempCalculation.Operand == '-' ? "-" : "";
-                    tempCalculation.PrimaryOperations = Double.Parse($"{sign}{number}");
-                    tempCalculation.Operand = letter;
-                    number = "";
-                }
-
-                else if (letter == '(')
-                {
-                    position++;
-                    double value = Calculate(textInput);
-                    string sign = tempCalculation.Operand == '-' ? "-" : "";
-                    if (tempCalculation.Operand == '*' || tempCalculation.Operand == '/')
-                        tempCalculation.PrimaryOperations = Double.Parse($"{sign}{value}");
-                    else
-                        tempCalculation.NonPrimaryOperations = Double.Parse($"{sign}{value}");
-                    number = "";
-                }
-
-                else if (letter == ')')
-                {
-                    string sign = tempCalculation.Operand == '-' ? "-" : "";
-                    if (tempCalculation.PrimaryOperations != 0 &&
-                        (tempCalculation.Operand == '*' || tempCalculation.Operand == '/'))
-                    {
-                        tempCalculation.PrimaryOperations = Double.Parse($"{sign}{number}");
-                        tempCalculation.NonPrimaryOperations = tempCalculation.PrimaryOperations;
-                        tempCalculation.PrimaryOperations = 0;
-                    }
-                    else
-                        tempCalculation.NonPrimaryOperations = Double.Parse($"{sign}{number}");
-                    position++;
-                    return tempCalculation.NonPrimaryOperations;
-                }
-                else
-                {
-                    number += letter;
-                }
-
-                position++;
+                tempCalculation.NonPrimaryOperations = tempCalculation.PrimaryOperations;
+                tempCalculation.PrimaryOperations = 0;
+                tempCalculation.PrimaryOperationsFlag = false;
             }
 
-            if (tempCalculation.PrimaryOperations != 0)
+            return tempCalculation.Operand == '-' ? "-" : "";
+        }
+
+        private static double HandleSign(string sign, string number)
+        {
+            if (sign == "-" && number[0] == '-')
+                return double.Parse(number.Remove(0, 1));
+            return double.Parse($"{sign}{number}");
+        }
+
+        /// <summary>
+        /// Calculate expression given in textInput
+        ///
+        /// Method goes through every char in string textInput and process it obeying next rules:
+        /// -> if char is number => save it to string
+        /// -> if char is + or - => save number to nonPrimaryNumbers array respecting the omen
+        /// -> if char is * or / => multiply/divide this number with the one saved to PrimaryNumbers
+        /// -> if char is ( or ) => recursively call Calculation for expression in brackets
+        /// </summary>
+        /// <param name="textInput"></param>
+        /// <returns></returns>
+        public static double Calculate(string textInput)
+        {
+            var number = "";
+            var sign = "";
+            var tempCalculation = new Calculation();
+            
+            while (Position < textInput.Length)
             {
-                string sign = tempCalculation.Operand == '-' ? "-" : "";
+                var letter = textInput[Position];
+                switch (letter)
+                {
+                    case '+':
+                    {
+                        sign = tempCalculation.Operand == '-' ? "-" : "";
+                        if (tempCalculation.PrimaryOperationsFlag)
+                        {
+                            tempCalculation.PrimaryOperations = HandleSign(sign, number);
+                            tempCalculation.NonPrimaryOperations = tempCalculation.PrimaryOperations;
+                            tempCalculation.PrimaryOperations = 0;
+                            tempCalculation.PrimaryOperationsFlag = false;
+                        }
+                        else
+                            tempCalculation.NonPrimaryOperations = HandleSign(sign, number);
+                        tempCalculation.Operand = '+';
+                        number = "";
+                        break;
+                    }
+                    case '-':
+                    {
+
+                            // Covers negative first number in expression
+                        sign = tempCalculation.Operand == '-' ? "-" : "";
+                        if (number == "")
+                            number = "0";
+                        if (tempCalculation.PrimaryOperationsFlag)
+                        {
+                            tempCalculation.PrimaryOperations = HandleSign(sign, number);
+                            tempCalculation.NonPrimaryOperations = tempCalculation.PrimaryOperations;
+                            tempCalculation.PrimaryOperations = 0;
+                            tempCalculation.PrimaryOperationsFlag = false;
+                        }
+                        else
+                            tempCalculation.NonPrimaryOperations = HandleSign(sign, number);
+                        tempCalculation.Operand = '-';
+                        number = "";
+                        break;
+                    }
+                    case '*':
+                    case '/':
+                    {
+                        sign = tempCalculation.Operand == '-' ? "-" : "";
+                        if (number != "")
+                            tempCalculation.PrimaryOperations = HandleSign(sign, number);
+                        tempCalculation.Operand = letter;
+                        number = "";
+                        break;
+                    }
+                    case '(':
+                    {
+                        Position++;
+                        double value = Calculate(textInput);
+                        number = value.ToString();
+                        break;
+                    }
+                    case ')':
+                    {
+                        sign = tempCalculation.Operand == '-' ? "-" : "";
+                        if (tempCalculation.Operand == '*' || tempCalculation.Operand == '/')
+                        {
+                            tempCalculation.PrimaryOperations = HandleSign(sign, number);
+                            tempCalculation.NonPrimaryOperations = tempCalculation.PrimaryOperations;
+                            tempCalculation.PrimaryOperations = 0;
+                        }
+                        else
+                            tempCalculation.NonPrimaryOperations = HandleSign(sign, number);
+                        return tempCalculation.NonPrimaryOperations;
+                    }
+                    default:
+                        number += letter;
+                        break;
+                }
+
+                Position++;
+            }
+
+            sign = tempCalculation.Operand == '-' ? "-" : "";
+            if (tempCalculation.PrimaryOperationsFlag)
+            {
                 if (number != "")
-                    tempCalculation.PrimaryOperations = Double.Parse($"{sign}{number}");
+                    tempCalculation.PrimaryOperations = HandleSign(sign, number);
                 return tempCalculation.PrimaryOperations + tempCalculation.NonPrimaryOperations;
             }
 
+
+            if (number == "") return tempCalculation.NonPrimaryOperations;
             
-            if (number != "")
-            {
-                string sign = tempCalculation.Operand == '-' ? "-" : "";
-                tempCalculation.NonPrimaryOperations = Double.Parse($"{sign}{number}");
-            }
+            tempCalculation.NonPrimaryOperations = HandleSign(sign, number);
             return tempCalculation.NonPrimaryOperations;
         }
 

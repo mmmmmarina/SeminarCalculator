@@ -78,7 +78,7 @@ namespace Calculator
             //    arrayOfNumbers.ArrayOfNumbers.Add(arrayOfNumbers.CreateNumber);
             //textBoxResult.Text= arrayOfNumbers.ArrayOfNumbers.Sum().ToString();
             textBoxResult.Text = ProcessInput.Calculate(textBoxDisplay.Text).ToString();
-            ProcessInput.position = 0;
+            ProcessInput.Position = 0;
             textBoxDisplay.Text = "";
         }
     }
