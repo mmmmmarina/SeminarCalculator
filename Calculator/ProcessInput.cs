@@ -11,16 +11,14 @@ namespace Calculator
     class Calculation
     {
         private double _primaryOperations;
-        private bool _primaryOperationsFlag;
-        private List<double> _nonPrimaryOperations;
-        private char _operand;
+        private readonly List<double> _nonPrimaryOperations;
 
         public Calculation()
         {
             _primaryOperations = 0;
-            _primaryOperationsFlag = false;
+            PrimaryOperationsFlag = false;
             _nonPrimaryOperations = new List<double>();
-            _operand = '\0';
+            Operand = '\0';
         }
 
         public double NonPrimaryOperations
@@ -29,11 +27,7 @@ namespace Calculator
             set => _nonPrimaryOperations.Add(value);
         }
 
-        public bool PrimaryOperationsFlag
-        {
-            get => _primaryOperationsFlag;
-            set => _primaryOperationsFlag = value;
-        }
+        public bool PrimaryOperationsFlag { get; set; }
 
         public double PrimaryOperations
         {
@@ -45,41 +39,25 @@ namespace Calculator
             set
             {
                 PrimaryOperationsFlag = true;
-                if (_operand == '*')
+                if (Operand == '*')
                     _primaryOperations *= value;
-                else if (_operand == '/')
+                else if (Operand == '/')
                     _primaryOperations /= value;
                 else
                     _primaryOperations = value;
             }
         }
 
-        public char Operand
-        {
-            get => _operand;
-            set => _operand = value;
-        }
+        public char Operand { get; set; }
     }
     class ProcessInput
     {
         public static int Position = 0;
 
-        private static string EmptyPrimaryOperations(Calculation tempCalculation)
-        {
-            if (tempCalculation.PrimaryOperationsFlag)
-            {
-                tempCalculation.NonPrimaryOperations = tempCalculation.PrimaryOperations;
-                tempCalculation.PrimaryOperations = 0;
-                tempCalculation.PrimaryOperationsFlag = false;
-            }
-
-            return tempCalculation.Operand == '-' ? "-" : "";
-        }
-
-        private static double HandleSign(string sign, string number)
+        private static double HandleSign(string sign, StringBuilder number)
         {
             if (sign == "-" && number[0] == '-')
-                return double.Parse(number.Remove(0, 1));
+                return double.Parse(number.Remove(0, 1).ToString());
             return double.Parse($"{sign}{number}");
         }
 
@@ -96,10 +74,10 @@ namespace Calculator
         /// <returns></returns>
         public static double Calculate(string textInput)
         {
-            var number = "";
-            var sign = "";
+            var number = new StringBuilder();
             var tempCalculation = new Calculation();
-            
+            string sign;
+
             while (Position < textInput.Length)
             {
                 var letter = textInput[Position];
@@ -118,7 +96,7 @@ namespace Calculator
                         else
                             tempCalculation.NonPrimaryOperations = HandleSign(sign, number);
                         tempCalculation.Operand = '+';
-                        number = "";
+                        number = new StringBuilder();
                         break;
                     }
                     case '-':
@@ -126,8 +104,8 @@ namespace Calculator
 
                             // Covers negative first number in expression
                         sign = tempCalculation.Operand == '-' ? "-" : "";
-                        if (number == "")
-                            number = "0";
+                        if (number.Length ==0)
+                             number.Append('0'); 
                         if (tempCalculation.PrimaryOperationsFlag)
                         {
                             tempCalculation.PrimaryOperations = HandleSign(sign, number);
@@ -138,24 +116,24 @@ namespace Calculator
                         else
                             tempCalculation.NonPrimaryOperations = HandleSign(sign, number);
                         tempCalculation.Operand = '-';
-                        number = "";
+                        number.Clear();
                         break;
                     }
                     case '*':
                     case '/':
                     {
                         sign = tempCalculation.Operand == '-' ? "-" : "";
-                        if (number != "")
+                        if (number.Length != 0)
                             tempCalculation.PrimaryOperations = HandleSign(sign, number);
                         tempCalculation.Operand = letter;
-                        number = "";
+                        number.Clear();
                         break;
                     }
                     case '(':
                     {
                         Position++;
                         double value = Calculate(textInput);
-                        number = value.ToString();
+                        number = new StringBuilder(value.ToString());
                         break;
                     }
                     case ')':
@@ -172,7 +150,7 @@ namespace Calculator
                         return tempCalculation.NonPrimaryOperations;
                     }
                     default:
-                        number += letter;
+                        number.Append(letter);
                         break;
                 }
 
@@ -182,13 +160,13 @@ namespace Calculator
             sign = tempCalculation.Operand == '-' ? "-" : "";
             if (tempCalculation.PrimaryOperationsFlag)
             {
-                if (number != "")
+                if (number.Length != 0)
                     tempCalculation.PrimaryOperations = HandleSign(sign, number);
                 return tempCalculation.PrimaryOperations + tempCalculation.NonPrimaryOperations;
             }
 
 
-            if (number == "") return tempCalculation.NonPrimaryOperations;
+            if (number.Length == 0) return tempCalculation.NonPrimaryOperations;
             
             tempCalculation.NonPrimaryOperations = HandleSign(sign, number);
             return tempCalculation.NonPrimaryOperations;
