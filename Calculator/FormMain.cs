@@ -34,7 +34,7 @@ namespace Calculator
 
         private void FormMain_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar >= 40 || e.KeyChar <= 58)
+            if (e.KeyChar >= 40 && e.KeyChar <= 58)
                 textBoxDisplay.Text += (char) e.KeyChar;
             else if (e.KeyChar == Keys.Enter.GetHashCode())
             {
